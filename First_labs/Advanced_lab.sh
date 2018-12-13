@@ -30,7 +30,7 @@ echo "find number of 'friday' strings in big file"
 Ð¿Ðgrep "Friday" crusoe.txt
 
 echo "write the list of files in ls.txt"
-Ð>Ðls.txt
+>ls.txt
 ls > ls.txt
 cat ls.txt
 
@@ -38,3 +38,6 @@ echo "delete tmp folder"
 cd ..
 rm -r tmp
 
+echo "find all txt"
+cd
+find -name "*.txt"
