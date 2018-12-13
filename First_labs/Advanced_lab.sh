@@ -38,6 +38,13 @@ echo "delete tmp folder"
 cd ..
 rm -r tmp
 
-echo "find all txt"
+echo "find all txt on disk"
 cd
+cd ..
+cd ..
+cd ..
 find -name "*.txt"
+
+echo "find all txt on disk withour trash. Send mistakes in nowhere"
+find -name "*.txt" 2>/dev/null
+
