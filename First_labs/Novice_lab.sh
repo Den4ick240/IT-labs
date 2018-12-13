@@ -2,7 +2,6 @@
 mkdir first_folder
 cd first_folder
 >first_file.txt
-echo 'Hello, world'>first_file.txt
 cd ..
 mkdir second_folder
 cd second_folder
