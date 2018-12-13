@@ -26,8 +26,8 @@ echo "try another write way(>>)"
 echo "kon ni chi ha sekai!" >> he_wo.txt
 cat he_wo.txt
 
-echo "find number of 'friday' strings in big file"
-Ð¿Ðgrep "Friday" crusoe.txt
+echo "find all of 'friday' strings in big file"
+grep  "Friday" crusoe.txt
 
 echo "write the list of files in ls.txt"
 >ls.txt
@@ -40,8 +40,6 @@ rm -r tmp
 
 echo "find all txt on disk"
 cd
-cd ..
-cd ..
 cd ..
 find -name "*.txt"
 
