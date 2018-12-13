@@ -1,9 +1,8 @@
 #!bin/bash
+wget http://factorized.net/crusoe.txt
 
 mkdir tmp
 cd tmp
-
-wget http://factorized.net/crusoe.txt
 
 echo "create eight files"
 >ichi.txt
@@ -26,15 +25,14 @@ echo "try another write way(>>)"
 echo "kon ni chi ha sekai!" >> he_wo.txt
 cat he_wo.txt
 
-echo "find number of 'friday' strings in big file"
-Ð¿Ðgrep "Friday" crusoe.txt
-
-echo "write the list of files in ls.txt"
-Ð>Ðls.txt
-ls > ls.txt
-cat ls.txt
-
 echo "delete tmp folder"
 cd ..
 rm -r tmp
 
+echo "find number of 'friday' strings in big file"
+grep -c "Friday" crusoe.txt
+
+
+
+echo "delete big file"
+rm crusoe.txt
