@@ -28,3 +28,4 @@ chown zelenskikh shared.txt
 mkdir shareddir
 chmod 400 shareddir
 chown zelenskikh shareddir
+rm -r shareddir
