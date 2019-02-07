@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int w[101], c[101], T[101][1001];
+
+
+
+int main()
+{
+	int k, N, W;
+
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+	
+	scanf("%d%d", &N, &W);
+
+	for (k = 0; k < W; k++)
+		T[0][k] = 0;
+
+	for (k = 1; k < N; k++)
+	{
+		int t;
+		
+		scanf("%d%d", c + k, w + k);
+		
+		for (t = 0; t < W; t++)
+		{
+			if (t < w[k])
+				T[k][t] = T[k - 1][t];
+			else
+				T[k][t] = (T[k - 1][t] > T[k - 1][t - w[k]] + c[k]) ? T[k - 1][t] : T[k - 1][t - w[k]] + c[k];
+		}
+	}
+
+	int t; 
+	for (k = 0; k < N; k++)
+	{
+		for (t = 0; t < W; t++)
+			printf("%d", T[k][t]);
+		printf("\n");
+	}
+
+
+	printf("%d", T[--N][--W]);
+
+
+
+	return 0;
+}
